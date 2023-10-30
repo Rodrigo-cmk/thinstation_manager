@@ -41,8 +41,7 @@
 
 		<div id='conteiner' class='conteiner'>
 			<form id='formConteudo' class='formConteudo' action="<?php $_SERVER['PHP_SELF']; ?>" method='post' name='formConteudo'>
-				<textArea type='text' cols='50' rows='15' name='arquivo' id='arquivo'>
-					<?php echo $leituraArquivo; $_SESSION['docAtual'] = $leituraArquivo; ?>
+				<textArea type='text' cols='50' rows='15' name='arquivo' id='arquivo'><?php echo $leituraArquivo; $_SESSION['docAtual'] = $leituraArquivo; ?>
 				</textArea>
 
 				<button id='btnSalvar' class='btnSalvar' name='btnSalvar' type='submit' form='formConteudo'>
