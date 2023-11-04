@@ -26,15 +26,27 @@
 				</ul>
 			</form>
 		<?php
+				// Utilizando um iterador para quando for criar um novo arquivo
+				// ele pegue o número de terminal mais baixo, sem precisar contar
+				// manualmente
+					$qtdArquivos = $qtdArquivos + 1;
+					if($qtdArquivos == 1){
+						$qtdArquivos = $qtdArquivos + 1;
+					}
 				}
 			}
 		?>
 
 
 		<!-- Bloco de criação de novos arquivos -->
-		<?php
-			echo "fazer bloco de novo arquivo";
-		?>
+
+		<hr>
+
+		<form action='/sessao/novoConteudo.php' method='post'>
+			<button id='btnNvConteudo' class='btnNvConteudo' name='btnNvConteudo' value='<?php echo $qtdArquivos; ?>'>
+				Novo arquivo
+			</buton>
+		</form>
 
 	</body>
 </html>

@@ -75,7 +75,7 @@
 
 	<?php
 		// Fecha arquivo
-		fclose($leituraArquivo);
+		fclose($abreArquivo);
 	?>
 </body>
 
