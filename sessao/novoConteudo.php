@@ -10,10 +10,20 @@
 <body>
 	<?php
 		if($_POST['btnSalvar'] == 'salvar'){
-			echo $_POST['arquivo'];
-			echo $_POST['nmArquivo'];
+			//echo $_POST['arquivo'];
+			//echo $_POST['nmArquivo'];
 
-			// fazer função de gravação
+			$ctdArquivo = $_POST['arquivo'];
+			$nmArquivo = $_POST['nmArquivo'];
+
+			$abreArquivo = fopen('/srv/tftp/ts5.4/'.$nmArquivo, 'x');
+
+			$escreveArquivo = fwrite($abreArquivo, $ctdArquivo);
+
+			fclose($abreArquivo);
+
+			//header('location: /sessao/indexSessao.php');
+			header('location: /indexSessao.php');
 		}
 	?>
 

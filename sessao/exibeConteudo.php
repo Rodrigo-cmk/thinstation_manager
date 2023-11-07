@@ -76,6 +76,8 @@
 	<?php
 		// Fecha arquivo
 		fclose($abreArquivo);
+
+		echo "FAZER BOTÃO DE EXCLUSÃO";
 	?>
 </body>
 
