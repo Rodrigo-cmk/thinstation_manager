@@ -15,6 +15,17 @@
 <body>
 	<!-- Bloco de salvamento do arquivo -->
 	<?php
+		if($_POST['btnExclui'] == 'exclui'){
+			$arquivoSelecionado = $_SESSION['docAtual'];
+
+			// Função de exclusão de arquivo
+			unlink('/srv/tftp/ts5.4/'.$arquivoSelecionado);
+
+			header('location: /sessao/indexSessao.php');
+			//header('location: /indexSessao.php');
+		}
+
+
 		if($_POST['btnSalvar'] == "salvar"){
 
 			// Captura o nome do arquivo salvo em sessão
@@ -34,8 +45,8 @@
 				$escritaArquivo = fwrite($abreArquivo, $conteudo);
 			}
 
-			header('location: /indexSessao.php');
-			//header('location: /sessao/indexSessao.php');
+			//header('location: /indexSessao.php');
+			header('location: /sessao/indexSessao.php');
 
 			fclose($abreArquivo);
 			$_SESSION['docAtual'] = "";
@@ -67,17 +78,22 @@
 				</button>
 			</form>
 
-			<a href='/indexSessao.php' id='btnVoltar' class='btnVoltar'>
-			<!-- <a href='/sessao/indexSessao.php' id='btnVoltar' class='btnVoltar'> -->
+			<form class='botoes' id='botoes' action="<?php $_SERVER['PHP_SELF']?>" method='post'>
+
+			<!-- <a href='/indexSessao.php' id='btnVoltar' class='btnVoltar'> -->
+			<a href='/sessao/indexSessao.php' id='btnVoltar' class='btnVoltar'>
 				Voltar
 			</a>
+
+			<button class='btnExclui' id='btnExclui' name='btnExclui' value='exclui'> Excluir
+			</button>
+
+			</form>
 		</div>
 
 	<?php
 		// Fecha arquivo
 		fclose($abreArquivo);
-
-		echo "FAZER BOTÃO DE EXCLUSÃO";
 	?>
 </body>
 

@@ -22,8 +22,8 @@
 
 			fclose($abreArquivo);
 
-			//header('location: /sessao/indexSessao.php');
-			header('location: /indexSessao.php');
+			header('location: /sessao/indexSessao.php');
+			//header('location: /indexSessao.php');
 		}
 	?>
 
@@ -46,8 +46,8 @@ SCREEN_RESOLUTION='1024x768'</textarea>
 			</button>
 		</form>
 
-		<a href='/indexSessao.php' id='btnVoltar' class='btnVoltar'>
-		<!-- <a href='/sessao/indexSessao' id='btnVoltar' class='btnVoltar'> -->
+		<!-- <a href='/indexSessao.php' id='btnVoltar' class='btnVoltar'> -->
+		<a href='/sessao/indexSessao.php' id='btnVoltar' class='btnVoltar'>
 			Voltar
 		</a>
 	</div>

@@ -25,8 +25,48 @@ a{
 	color: black;
 }
 
+.botoes{
+	justify-content: space-between;
+	display: flex;
+}
+
+#btnExclui{
+	height: 28px;
+	font-size: 15px;	
+}
+
 textarea{
 	border-radius: 5px;
 	width: 100%;
 	resize: none;
+}
+
+.boxLogin{
+	display: flex;
+	justify-content: center;
+   	align-items: center;
+	height: 100%;
+	flex-direction: column;
+}
+
+.formLogin{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	border: 1px solid black;
+	padding: 15px;
+	border-radius: 10px;
+}
+
+
+.user, .senha{
+	margin: 5px;
+	border-radius: 5px;
+	border: 1px solid black;
+}
+
+.btnLogin{
+	font-size: 15px;
+	background-color: lightgrey;
 }
