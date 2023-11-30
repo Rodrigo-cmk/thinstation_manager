@@ -1,4 +1,8 @@
 <?php
+	session_start();
+?>
+
+<?php
 	include('funcao/conexao.php');
 ?>
 
@@ -32,18 +36,25 @@
 			$usuario = $_POST['user'];
 			$senha = $_POST['senha'];
 
-
-			// AQUI TA COM ERROO
 			$consulta = $conexao->query(
-				"SELECT * FROM usuarios WHERE nmUser = '$usuario' AND pwUser = '$senha'";
+				"SELECT * FROM usuarios WHERE nmUser = '$usuario' AND pwUser = '$senha'"
 			);
 
 			$resultadoUser1 = "";
                         while($resultadoUser2 = $consulta->fetch_assoc()){
-                              $resultadoUser1 = $resultadoUser2['nmUser'];
+				$resultadoUser1 = $resultadoUser2['nmUser'];
 				$resultadoPw = $resultadoUser2['pwUser'];
-                              echo $resultadoUser1 . "<br>" . $resultadoPw;
                         }
+
+			if($resultadoUser1 !== "" && $resultadoPw !== ""){
+				$_SESSION['user'] = $resultadoUser1;
+				$_SESSION['senha'] = $resultadoPw;
+
+				header('location: /sessao/indexSessao.php');
+			}
+			else{
+				echo "mensagem de erro";
+			}
 		}
 
 	?>

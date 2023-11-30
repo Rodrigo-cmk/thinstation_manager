@@ -70,3 +70,17 @@ textarea{
 	font-size: 15px;
 	background-color: lightgrey;
 }
+
+.apresentacao{
+	font-size: 20px;
+	font-family: sans-serif;
+}
+
+#btnNvConteudo, #btnSair{
+	width: 150px;
+	height: 26px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 17px;
+}

@@ -2,6 +2,10 @@
 	session_start();
 ?>
 
+<?php
+	include "../funcao/bloqueio.php";
+?>
+
 <html>
 
 <head>
