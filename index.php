@@ -50,7 +50,7 @@
 				$_SESSION['user'] = $resultadoUser1;
 				$_SESSION['senha'] = $resultadoPw;
 
-				header('location: /sessao/indexSessao.php');
+				header('location: /sessao/index.php');
 			}
 			else{
 				echo "mensagem de erro";

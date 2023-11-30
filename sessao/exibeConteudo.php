@@ -25,8 +25,8 @@
 			// Função de exclusão de arquivo
 			unlink('/srv/tftp/ts5.4/'.$arquivoSelecionado);
 
-			header('location: /sessao/indexSessao.php');
-			//header('location: /indexSessao.php');
+			header('location: /sessao/index.php');
+			//header('location: /index.php');
 		}
 
 
@@ -49,8 +49,8 @@
 				$escritaArquivo = fwrite($abreArquivo, $conteudo);
 			}
 
-			//header('location: /indexSessao.php');
-			header('location: /sessao/indexSessao.php');
+			//header('location: /index.php');
+			header('location: /sessao/index.php');
 
 			fclose($abreArquivo);
 			$_SESSION['docAtual'] = "";
@@ -84,8 +84,8 @@
 
 			<form class='botoes' id='botoes' action="<?php $_SERVER['PHP_SELF']?>" method='post'>
 
-			<!-- <a href='/indexSessao.php' id='btnVoltar' class='btnVoltar'> -->
-			<a href='/sessao/indexSessao.php' id='btnVoltar' class='btnVoltar'>
+			<!-- <a href='/index.php' id='btnVoltar' class='btnVoltar'> -->
+			<a href='/sessao/index.php' id='btnVoltar' class='btnVoltar'>
 				Voltar
 			</a>
 
