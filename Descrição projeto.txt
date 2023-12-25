@@ -1,0 +1,6 @@
+Olá rede! Gostaria de compartilhar um projeto que implantei a um tempo atrás, dessa vez recriei a infra em um ambiente de teste e com um sistema de gestão em PHP.
+
+A idéia do projeto é a implantação de um ambiente PXE com VDI, iniciando o SO em um Debian e tendo um Windows para a GUI do usuário.	
+
+Ao iniciar, o host (sem armazenamento) busca um servidor DHCP, sendo este o ISC-DHCP no Debian. O servidor DHCP irá fornecer um endereço para o host e também o guiará à imagem do Thinstation que se encontra no servidor TFTP, que por sua vez é o TFTP-HPA e também está no Debian.
+Dentro do diretório TFTP terá uma imagem do Thinstation customizada para ser o mais leve possível, de forma que a única função desse SO seja rodar o FreeRDP, acessando o Windows (aqui entra o VDI).
